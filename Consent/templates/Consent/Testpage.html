@@ -1,0 +1,64 @@
+{% extends "global/WaitPage.html" %}
+{% load otree static %}
+
+{% block scripts %}
+<script>
+
+    document.querySelector('[name=test]').value = 0;
+
+</script>
+{% endblock %}
+
+{% block content %}
+<!-- ------------------------------- Header -------------------------------- -->
+<div class="outer-head-div">
+    <span class="inner-head-div-text new-title">
+        <!-- Title -->
+    </span>
+
+    <div class="inner-head-div-logo">
+        <img src="{% static 'Hypothesentesten/hd-logo-sw.png' %}" class="logo"/>
+    </div>
+</div>
+<hr style="margin-top:1px; margin-bottom:15px;">
+<!-- ------------------------------- Header -------------------------------- -->
+
+
+
+<!-- Gender -->
+<div class="multiple-choice-div">
+    <div class="m-c-question">
+    Welchem Geschlecht ordnen Sie sich zu?<br>
+    </div>
+    <input type="radio" id="gend1" name="test" value="w">
+    <div class="m-c-besides-button"></div>
+    <label class="multiple-choice-label" for="gend1">Weiblich</label>
+    <br>
+    <input type="radio" id="gend2" name="test" value="m">
+    <div class="m-c-besides-button"></div>
+    <label class="multiple-choice-label" for="gend2">Männlich</label>
+    <br>
+    <input type="radio" id="gend3" name="test" value="d">
+    <div class="m-c-besides-button"></div>
+    <label class="multiple-choice-label" for="gend2">Divers</label>
+    <br>
+    <label class="multiple-choice-label" for="gend3">Das möchte ich lieber selbst beschreiben:</label>
+    <input type="text" id="gend4" name="test" value=" ">
+    <div class="m-c-besides-button"></div>
+</div>
+<div class="blank-space-very-small">  </div>
+
+
+
+
+
+
+
+
+<br>
+<button class="otree-btn-next btn btn-primary" id="sendbutton">Weiter</button>
+
+<hr>
+<p> <a href="mailto: lob@stud.uni-heidelberg.de" target="_blank">Aaron Lob</a>, Universität Heidelberg  - 2020</p>
+
+{% endblock %}
